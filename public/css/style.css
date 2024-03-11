@@ -1,0 +1,244 @@
+
+a{color: black;}
+h1{font-size: 2.5rem;}
+h2{font-size: 1.5rem;}
+h3{font-size: 1rem;}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: var--(--font-size-base);
+    background-color: rgb(247, 232, 206);
+    background-image: url("img/yh.jpg");
+    margin: 0;
+}
+
+.btn{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.btn-delete{
+    padding: 10px 16px;
+    background-color: red;
+
+}
+img{
+    width: 80%;
+    height: 500px;
+    
+}
+
+.container{
+    max-width: 982px;
+    margin:0 auto;
+    padding: 0 10px;
+}
+.main{
+    padding: 20px 0;
+}
+.hero-image{
+    max-height: 528px;
+    filter: drop-shadow(0px 44px 30px black);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.header{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-top: 10px;
+    grid-template-areas: "logo button"
+    "menu menu";
+}
+
+@media only screen and (min-width:768px){
+    .header{
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo menu";
+    }
+}
+.header__logo{
+    grid-area: logo;
+    font-weight: 800;
+    font-size: 25px;
+    text-decoration: none;
+}
+.header__logo:hover{
+    text-decoration: underline;
+}
+
+.header__nav{
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+}
+
+.header__button{
+    grid-area: button;
+    display: flex;
+    justify-content: end;
+
+}
+.header__button button{
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    border: 0;
+    padding: a6px 12px;
+    background: none;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    font-weight: 600;
+    color: black;
+    font-size: 1.5rem;  
+
+}
+.header__button button:hover{
+    border: 2px solid black;
+}
+.header__nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 0;
+
+}
+.header__nav ul a{
+    padding: 10px;
+    text-decoration: none;
+
+}
+.header__nav ul a:hover{
+    text-decoration: underline;
+}
+.header__nav ul a.active{
+    color: gray;
+}
+
+.author{
+    padding: 10px o;
+    text-align: center;
+}
+.author__heading{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.author__body{
+    font-size: 1.5rem;
+    margin: 5px 0 40px 0;
+}
+
+.article__heading{
+    margin-top: 4rem;
+    font-weight: 400;
+
+}
+.article-ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(1.13rem, cal(1.08rem + 0.22vw), 1.25rem);
+    display: flex;
+    flex-direction: column;
+
+}
+.article-list__date{
+    font-size: 1.5rem;
+    color: gray;
+    width: 260px;
+    display: inline-block;
+}
+
+.article-ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 18px 0;
+}
+
+@media only screen and (min-width:768px){
+    .article-ul li a{
+        flex-direction: row;
+        align-items: center;
+    }
+    .article-list__date{
+        text-align: right;
+    }
+}
+
+.article-ul li{
+    font-size: 24px;
+    cursor: pointer;
+    transition: filter 0.1s;
+}
+.article-ulli:not(:last-child){
+    border-bottom:  1px solid lightgray;
+}
+.article-ul li :hover{
+    filter: none;
+}
+.pagination{
+    font-size: 1.3rem;
+    color: gray;
+    text-decoration: none;
+    margin-top: 40px;
+    display: inline-block;
+}
+.pagination:hover{
+    color: black;
+}
+.article{
+    white-space: pre-wrap;
+}
+.footer{
+    margin: 4rem;
+    text-align: center;
+}
+
+/*search Bar*/
+
+.searchBar{
+    visibility: hidden;
+    transform: translateY(-100px);
+    background-color: black;
+    padding: 4px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.searchBar.open{
+    transform: translateY(0);
+    transition: transform 0.1s;
+
+}
+.searchBar input{
+    margin: 0;
+    padding: 0;
+
+}
+#searchClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: lightgrey;
+    padding: 15px;
+}
+.pagination {
+    font-size: 1.3rem;
+    color: var(--gray);
+    text-decoration: none;
+    margin-top: 40px;
+    display: inline-block;
+  }
+  
+  .pagination:hover {
+    color: var(--black);
+  }
